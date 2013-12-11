@@ -2,9 +2,13 @@
 
 namespace LeagueAPIForCSharp
 {
+    /// <summary>
+    /// champion-v1.1
+    /// </summary>
+    #region champion
     public class ChampionListDto
     {
-        public IList<ChampionDto> champion { get; set;}
+        public List<ChampionDto> champion { get; set;}
     }
 
     public class ChampionDto
@@ -21,10 +25,15 @@ namespace LeagueAPIForCSharp
         public bool freeToPlay { get; set; }
         public int magicRank { get; set; }
     }
+    #endregion
 
+    /// <summary>
+    /// game-v1.1
+    /// </summary>
+    #region game
     public class RecentGamesDto
     {
-        public IList<GameDto> games { get; set; }
+        public List<GameDto> games { get; set; }
         public long summonerId { get; set; }
     }
 
@@ -33,7 +42,7 @@ namespace LeagueAPIForCSharp
         public int championId { get; set; }
         public long createDate { get; set; }
         public string createDateStr { get; set; }
-        public IList<PlayerDto> fellowPlayers { get; set; }
+        public List<PlayerDto> fellowPlayers { get; set; }
         public long gameId { get; set; }
         public string gameMode { get; set; }
         public string gameType { get; set; }
@@ -42,7 +51,7 @@ namespace LeagueAPIForCSharp
         public int mapId { get; set; }
         public int spell1 { get; set; }
         public int spell2 { get; set; }
-        public IList<RawStatDto> statistics { get; set; }
+        public List<RawStatDto> statistics { get; set; }
         public string subType { get; set; }
         public int teamId { get; set; }
     }
@@ -60,10 +69,15 @@ namespace LeagueAPIForCSharp
         public string name { get; set; }
         public int value { get; set; }
     }
+    #endregion
 
+    /// <summary>
+    /// league-v2.1
+    /// </summary>
+    #region league
     public class LeagueDto
     {
-        public IList<LeagueItemDto> entries { get; set; }
+        public List<LeagueItemDto> entries { get; set; }
         public string name { get; set; }
         public string queue { get; set; }
         public string tier { get; set; }
@@ -93,7 +107,7 @@ namespace LeagueAPIForCSharp
     public class MiniSeriesDto
     {
         public int losses { get; set; }
-        public IList<characters> progress { get; set; }
+        public List<characters> progress { get; set; }
         public int target { get; set; }
         public long tiemLeftToPlayMillis { get; set; }
         public int wins { get; set; }
@@ -103,16 +117,21 @@ namespace LeagueAPIForCSharp
     {
         public string character { get; set; }
     }
+    #endregion
 
+    /// <summary>
+    /// stats-v1.1
+    /// </summary>
+    #region stats
     public class PlayerStatsSummaryListDto
     {
-        public IList<PlayerStatsSummaryDto> playerStatSummaries { get; set; }
+        public List<PlayerStatsSummaryDto> playerStatSummaries { get; set; }
         public long summonerId { get; set; }
     }
 
     public class PlayerStatsSummaryDto
     {
-        public IList<AggregatedStatDto> aggregatedStats { get; set; }
+        public List<AggregatedStatDto> aggregatedStats { get; set; }
         public int losses { get; set; }
         public long modifyDate { get; set; }
         public string modifyDateStr { get; set; }
@@ -129,7 +148,7 @@ namespace LeagueAPIForCSharp
 
     public class RankedStatsDto
     {
-        public IList<ChampionStatsDto> champions { get; set; }
+        public List<ChampionStatsDto> champions { get; set; }
         public long modifyDate { get; set; }
         public string modifyDateStr { get; set; }
         public long sommonerId { get; set; }
@@ -139,7 +158,7 @@ namespace LeagueAPIForCSharp
     {
         public int id { get; set; }
         public string name { get; set; }
-        public IList<ChampionStatDto> stats { get; set; }
+        public List<ChampionStatDto> stats { get; set; }
     }
 
     public class ChampionStatDto
@@ -149,10 +168,15 @@ namespace LeagueAPIForCSharp
         public string name { get; set; }
         public int value { get; set; }
     }
+    #endregion
 
+    /// <summary>
+    /// summoner-v1.1
+    /// </summary>
+    #region summoner
     public class MasteryPagesDto
     {
-        public IList<MasteryPageDto> pages { get; set; }
+        public List<MasteryPageDto> pages { get; set; }
         public long summonerId { get; set; }
     }
     
@@ -160,7 +184,7 @@ namespace LeagueAPIForCSharp
     {
         public bool current { get; set; }
         public string name { get; set; }
-        public IList<TalentDto> talents { get; set; }
+        public List<TalentDto> talents { get; set; }
     }
 
     public class TalentDto
@@ -172,7 +196,7 @@ namespace LeagueAPIForCSharp
 
     public class RunePagesDto
     {
-        public IList<RunePageDto> pages { get; set; }
+        public List<RunePageDto> pages { get; set; }
         public long summonerId { get; set; }
     }
 
@@ -181,7 +205,7 @@ namespace LeagueAPIForCSharp
         public bool current { get; set; }
         public long id { get; set; }
         public string name { get; set; }
-        public IList<RuneSlotDto> slots { get; set; }
+        public List<RuneSlotDto> slots { get; set; }
     }
 
     public class RuneSlotDto
@@ -210,7 +234,7 @@ namespace LeagueAPIForCSharp
 
     public class SummonerNameListDto
     {
-        public IList<SummonerNameDto> summoners { get; set; }
+        public List<SummonerNameDto> summoners { get; set; }
     }
 
     public class SummonerNameDto
@@ -218,14 +242,19 @@ namespace LeagueAPIForCSharp
         public long id { get; set; }
         public string name { get; set; }
     }
+    #endregion
 
+    /// <summary>
+    /// team-v2.1
+    /// </summary>
+    #region team
     public class TeamDto
     {
         public string createDate { get; set; }
         public string lastGameDate { get; set; }
         public string lastJoinDate { get; set; }
         public string lastJoinedRankedTeamQueueDate { get; set; }
-        public IList<MatchHistorySummaryDto> matchHistory { get; set; }
+        public List<MatchHistorySummaryDto> matchHistory { get; set; }
         public MessageOfDayDto messageofDat { get; set; }
         public string modifyDate { get; set; }
         public string name { get; set; }
@@ -263,7 +292,7 @@ namespace LeagueAPIForCSharp
 
     public class RosterDto
     {
-        public IList<TeamMemberInfoDto> memberList { get; set; }
+        public List<TeamMemberInfoDto> memberList { get; set; }
         public long ownerId { get; set; }
     }
 
@@ -275,7 +304,7 @@ namespace LeagueAPIForCSharp
     public class TeamStatSummaryDto
     {
         public teamIdDto teamId { get; set; }
-        public IList<TeamStatDetailDto> teamStatDetails { get; set; }
+        public List<TeamStatDetailDto> teamStatDetails { get; set; }
     }
 
     public class TeamMemberInfoDto
@@ -297,4 +326,6 @@ namespace LeagueAPIForCSharp
         public string teamStatType { get; set; }
         public int wins { get; set; }
     }
+    #endregion
+
 }
