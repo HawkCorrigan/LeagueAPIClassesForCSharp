@@ -1,0 +1,5 @@
+f:\files\documents\visual studio 2013\Projects\LeagueAPIClassesForCSharp\LeagueAPIClassesForCSharp\bin\Debug\LeagueAPIClassesForCSharp.dll
+f:\files\documents\visual studio 2013\Projects\LeagueAPIClassesForCSharp\LeagueAPIClassesForCSharp\bin\Debug\LeagueAPIClassesForCSharp.pdb
+f:\files\documents\visual studio 2013\Projects\LeagueAPIClassesForCSharp\LeagueAPIClassesForCSharp\obj\Debug\LeagueAPIClassesForCSharp.csprojResolveAssemblyReference.cache
+f:\files\documents\visual studio 2013\Projects\LeagueAPIClassesForCSharp\LeagueAPIClassesForCSharp\obj\Debug\LeagueAPIClassesForCSharp.dll
+f:\files\documents\visual studio 2013\Projects\LeagueAPIClassesForCSharp\LeagueAPIClassesForCSharp\obj\Debug\LeagueAPIClassesForCSharp.pdb
