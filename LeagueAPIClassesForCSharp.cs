@@ -8,7 +8,7 @@ namespace LeagueAPIForCSharp
     #region champion
     public class ChampionListDto
     {
-        public List<ChampionDto> champion { get; set;}
+        public List<ChampionDto> champions { get; set;}
     }
 
     public class ChampionDto
