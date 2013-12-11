@@ -61,11 +61,6 @@ namespace LeagueAPIForCSharp
         public int value { get; set; }
     }
 
-    public class League
-    {
-        public IList<LeagueDto> leagues { get; set; }
-    }
-
     public class LeagueDto
     {
         public IList<LeagueItemDto> entries { get; set; }
@@ -222,5 +217,84 @@ namespace LeagueAPIForCSharp
     {
         public long id { get; set; }
         public string name { get; set; }
+    }
+
+    public class TeamDto
+    {
+        public string createDate { get; set; }
+        public string lastGameDate { get; set; }
+        public string lastJoinDate { get; set; }
+        public string lastJoinedRankedTeamQueueDate { get; set; }
+        public IList<MatchHistorySummaryDto> matchHistory { get; set; }
+        public MessageOfDayDto messageofDat { get; set; }
+        public string modifyDate { get; set; }
+        public string name { get; set; }
+        public RosterDto roster { get; set; }
+        public string secondLastJoinDate { get; set; }
+        public string status { get; set; }
+        public string tag { get; set; }
+        public teamIdDto teamId { get; set; }
+        public TeamStatSummaryDto teamStatSummary { get; set; }
+        public string thirdLastJoinDate { get; set; }
+        public long timestamp { get; set; }
+    }
+
+    public class MatchHistorySummaryDto
+    {
+        public int assists { get; set; }
+        public long date { get; set; }
+        public int deaths { get; set; }
+        public long gameId { get; set; }
+        public string gameMode { get; set; }
+        public bool invalid { get; set; }
+        public int kills { get; set; }
+        public int mapId { get; set; }
+        public int opposingTeamKills { get; set; }
+        public string opposingTeamName { get; set; }
+        public bool win { get; set; }
+    }
+
+    public class MessageOfDayDto
+    {
+        public long createDate { get; set; }
+        public string message { get; set; }
+        public int version { get; set; }
+    }
+
+    public class RosterDto
+    {
+        public IList<TeamMemberInfoDto> memberList { get; set; }
+        public long ownerId { get; set; }
+    }
+
+    public class teamIdDto
+    {
+        public string fullId { get; set; }
+    }
+
+    public class TeamStatSummaryDto
+    {
+        public teamIdDto teamId { get; set; }
+        public IList<TeamStatDetailDto> teamStatDetails { get; set; }
+    }
+
+    public class TeamMemberInfoDto
+    {
+        public string inviteDate { get; set; }
+        public string joinDate { get; set; }
+        public long playerId { get; set; }
+        public string status { get; set; }
+    }
+
+    public class TeamStatDetailDto
+    {
+        public int averageGamesPlayed { get; set; }
+        public int losses { get; set; }
+        public int maxRating { get; set; }
+        public int rating { get; set; }
+        public int seedRating { get; set; }
+        public teamIdDto teamid { get; set; }
+        public string teamStatType { get; set; }
+        public int wins { get; set; }
     }
 }
